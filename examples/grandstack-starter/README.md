@@ -8,6 +8,24 @@ This project is a starter for building a [GRANDstack](https://grandstack.io) (Gr
 
 ## Quickstart
 
+The easiest way to use this repo is to have [Docker Desktop](https://www.docker.com/products/docker-desktop) installed and configured on your development machine.
+
+To spin up all of the necessary services - which include an ephermeral locally running Neo4j database server, a back-end API, and a front-end React application - simply run:
+
+```sh
+# Make sure you are in the grandstack-starter directory
+$ cd examples/grandstack
+
+# Start it up
+$ npm start
+```
+
+The GRANDstack Starter Neo4j browser will be available at [http://localhost:7474/](http://localhost:7474/) - be sure to log in with the credentials defined in `examples/grandstack-starter/api/.env` - which would be a local username of `neo4j` and a password of `letmein` if you have not made any changes.
+
+The React web application will be available at [http://localhost:3000](http://localhost:3000).
+
+You can explore the GraphQL API by browsing to [http://localhost:4001/graphql](http://localhost:4001/graphql).
+
 ### Neo4j
 
 You need a Neo4j instance, e.g. a [Neo4j Sandbox](http://neo4j.com/sandbox), a local instance via [Neo4j Desktop](https://neo4j.com/download), [Docker](http://hub.docker.com/_/neo4j) or a [Neo4j instance on AWS, Azure or GCP](http://neo4j.com/developer/guide-cloud-deployment) or [Neo4j Cloud](http://neo4j.com/cloud)
