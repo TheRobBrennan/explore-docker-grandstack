@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm start",
-    "start": "cd examples/grandstack && npm run build",
-    "stop": "cd examples/grandstack && npm run stop",
+    "start": "cd examples/grandstack-starter && npm run build",
+    "stop": "cd examples/grandstack-starter && npm run stop",
     "docker:nuke": "docker system prune -a && docker volume prune"
   },
   "repository": {
