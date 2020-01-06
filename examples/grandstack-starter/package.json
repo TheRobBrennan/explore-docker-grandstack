@@ -5,8 +5,8 @@
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
   "license": "ISC",
   "scripts": {
-    "start": "docker-compose up",
-    "build": "docker-compose up --remove-orphans --build --force-recreate",
+    "start": "docker-compose up -d && docker-compose run api npm run seedDb",
+    "build": "docker-compose up --remove-orphans --build --force-recreate -d && docker-compose run api npm run seedDb",
     "stop": "docker-compose down",
     "docker:nuke": "docker system prune -a && docker volume prune"
   }
