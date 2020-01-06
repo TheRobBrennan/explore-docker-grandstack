@@ -20,11 +20,17 @@ $ cd examples/grandstack
 $ npm start
 ```
 
-The GRANDstack Starter Neo4j browser will be available at [http://localhost:7474/](http://localhost:7474/) - be sure to log in with the credentials defined in `examples/grandstack-starter/api/.env` - which would be a local username of `neo4j` and a password of `letmein` if you have not made any changes.
+The GRANDstack Starter Neo4j browser will be available at [http://localhost:7474/](http://localhost:7474/) - be sure to log in with the credentials defined in `examples/grandstack-starter/api/.env` - which would be a local username of `neo4j` and a password of `letmein` if you have not made any changes:
 
-The React web application will be available at [http://localhost:3000](http://localhost:3000).
+![__screenshots__/grandstack-neo4j-browser.png](__screenshots__/grandstack-neo4j-browser.png)
 
-You can explore the GraphQL API by browsing to [http://localhost:4001/graphql](http://localhost:4001/graphql).
+The React web application will be available at [http://localhost:3000](http://localhost:3000):
+
+![__screenshots__/grandstack-react-app.png](__screenshots__/grandstack-react-app.png)
+
+You can explore the GraphQL API by browsing to [http://localhost:4001/graphql](http://localhost:4001/graphql):
+
+![__screenshots__/grandstack-graphiql.png](__screenshots__/grandstack-graphiql.png)
 
 ### Neo4j
 
