@@ -6,8 +6,8 @@
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm start",
-    "start": "cd examples/grandstack-starter && npm run build",
+    "build": "cd examples/grandstack-starter && npm run build",
+    "start": "cd examples/grandstack-starter && npm run start",
     "stop": "cd examples/grandstack-starter && npm run stop",
     "docker:nuke": "docker system prune -a && docker volume prune"
   },
