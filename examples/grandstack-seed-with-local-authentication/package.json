@@ -1,0 +1,21 @@
+{
+  "name": "grandstack-seed",
+  "version": "0.0.0",
+  "description": "Seed project for building GRAND Stack applications.",
+  "scripts": {
+    "start": "npx concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "install-all": "npm install && cd server && npm --build-from-source install bcrypt && npm install && cd ../client && npm --build-from-source install bcrypt && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheRobBrennan/grandstack-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TheRobBrennan/grandstack-seed/issues"
+  },
+  "homepage": "https://github.com/TheRobBrennan/grandstack-seed#readme"
+}
