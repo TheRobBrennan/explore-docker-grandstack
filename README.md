@@ -23,7 +23,8 @@ Before running this example, please fire up the [Neo4j Browser](http://localhost
 If you already have `npm` and [Docker](https://www.docker.com) installed on your development system, simply run:
 
 ```sh
-$ npm run start
+$ npm run start       # Uses Neo4j v3.5
+$ npm run start:v4.0  # Uses Neo4j v4.0
 ```
 
 This will create the services identified by `docker-compose.yml` - which includes a [Neo4j](https://neo4j.com) database server, a [GraphQL](https://graphql.org) back-end powered by [Express](https://expressjs.com) and [Apollo](https://www.apollographql.com), and a [GraphQL](https://graphql.org) web application built with [create-react-app](https://create-react-app.dev) and [Apollo](https://www.apollographql.com).
