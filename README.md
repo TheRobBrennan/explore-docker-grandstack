@@ -45,3 +45,19 @@ If you have stopped services and containers, you can start them again with `npm 
 This is a convenient tool that can have drastic consequences. If you would like to destroy **ALL** Docker images, containers, volumes, and networks on your system - **for all projects, not just this one** - this is the script for you.
 
 Be careful!
+
+#### Useful URLs
+
+Once your Dockerized example is up and running, here are some useful URLs:
+
++ [http://localhost:3000/](http://localhost:3000/) - This is the React front-end web application
++ [http://localhost:8000/graphql](http://localhost:8000/graphql) - This is the GraphiQL IDE you can use to interact with your GraphQL back-end server
+  + Since we are using protected routes for our GraphQL server, you will need to pass a valid authorization token in the `HTTP Headers` section such as:
+  ```json
+  {
+    "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZWQ5ZmVlZTgtZjdlZi00NTIxLWIwOWQtNGU5OTNlYjk5MDEwIiwidXNlcm5hbWUiOiJ0aGVyb2JicmVubmFuIn0sImlhdCI6MTU4MzExMTA2OCwiZXhwIjoxNTgzNzE1ODY4fQ.mMq9QCpXLtsGNb0HWMszz9gAD-c8rjidVVZku3geEQQ"
+  }
+  ```
+    + To find a valid token, make sure you have registered and logged in with an account, and then view your browser development tools to find the token stored in your local storage.
+      + Curious what's inside that magic JWT token? Check out [https://jwt.io](https://jwt.io) and paste it in to find out.
++ [http://localhost:7474/browser/](http://localhost:7474/browser/) - This is the Neo4j Browser that will allow you to interact with your Neo4j server
