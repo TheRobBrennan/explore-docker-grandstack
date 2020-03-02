@@ -75,6 +75,7 @@ Once your Dockerized example is up and running, here are some useful URLs:
     "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZWQ5ZmVlZTgtZjdlZi00NTIxLWIwOWQtNGU5OTNlYjk5MDEwIiwidXNlcm5hbWUiOiJ0aGVyb2JicmVubmFuIn0sImlhdCI6MTU4MzExMTA2OCwiZXhwIjoxNTgzNzE1ODY4fQ.mMq9QCpXLtsGNb0HWMszz9gAD-c8rjidVVZku3geEQQ"
   }
   ```
+    ![screenshots/screenshot-14.png](screenshots/screenshot-14.png)
     + To find a valid token, make sure you have registered and logged in with an account, and then view your browser development tools to find the token stored in your local storage.
       + Curious what's inside that magic JWT token? Check out [https://jwt.io](https://jwt.io) and paste it in to find out.
       ![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
