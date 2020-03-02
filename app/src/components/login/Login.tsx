@@ -12,7 +12,7 @@ export const Login = () => {
   const [Login, { data, error }] = useMutation(SIGN_IN);
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      email: 'rob@therobbrennan.com',
+      email: 'me@mail.com',
       password: 'testtest',
     }
   });

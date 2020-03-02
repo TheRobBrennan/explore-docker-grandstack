@@ -22,7 +22,7 @@ export const Register = () => {
   const [RegisterUser, { data, error }] = useMutation(REGISTER);
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      email: 'rob@therobbrennan.com',
+      email: 'me@mail.com',
       username: 'therobbrennan',
       password: 'testtest',
       confirmPassword: 'testtest'
