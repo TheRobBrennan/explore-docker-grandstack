@@ -26,9 +26,6 @@ SCREENSHOT: View after logging out - note that the authorization token is no lon
 SCREENSHOT: View of our graph database in Neo4j Browser
 ![screenshots/screenshot-07.png](screenshots/screenshot-07.png)
 
-SCREENSHOT: View of the sample JWT token
-![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
-
 ## Initial setup
 
 To run this example, all you need to have installed on your system is [Docker](https://www.docker.com) and `npm` installed on your development system - which is automatically included if you downloaded and installed [Node.js](https://nodejs.org/).
@@ -95,4 +92,5 @@ Once your Dockerized example is up and running, here are some useful URLs:
   ```
     + To find a valid token, make sure you have registered and logged in with an account, and then view your browser development tools to find the token stored in your local storage.
       + Curious what's inside that magic JWT token? Check out [https://jwt.io](https://jwt.io) and paste it in to find out.
+      ![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
 + [http://localhost:7474/browser/](http://localhost:7474/browser/) - This is the Neo4j Browser that will allow you to interact with your Neo4j server
