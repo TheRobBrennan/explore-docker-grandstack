@@ -2,6 +2,33 @@
 
 This GRANDStack ([GraphQL](https://graphql.org), [React](https://reactjs.org), [Apollo](https://www.apollographql.com), [Neo4j Database](https://neo4j.com)) example contains built-in local authentication against a Neo4j back-end database - originally inspired by existing work from [@erikrahm](https://github.com/erikrahm) in the repo [https://github.com/erikrahm/grand-stack-seed](https://github.com/erikrahm/grand-stack-seed) - and is meant to serve as a starting point for exploring the [GRANDstack](https://grandstack.io/docs/getting-started-neo4j-graphql.html) using [Docker](https://www.docker.com).
 
+SCREENSHOT: Loading `/` redirects to the `/login` page
+![screenshots/screenshot-00.png](screenshots/screenshot-00.png)
+
+SCREENSHOT: Attempting to login against an empty database
+![screenshots/screenshot-01.png](screenshots/screenshot-01.png)
+
+SCREENSHOT: Creating a new account
+![screenshots/screenshot-02.png](screenshots/screenshot-02.png)
+
+SCREENSHOT: Ready to login!
+![screenshots/screenshot-03.png](screenshots/screenshot-03.png)
+
+SCREENSHOT: View after successfully authenticating
+![screenshots/screenshot-04.png](screenshots/screenshot-04.png)
+
+SCREENSHOT: View after successfully authenticating with the authorization token in local storage
+![screenshots/screenshot-05.png](screenshots/screenshot-05.png)
+
+SCREENSHOT: View after logging out - note that the authorization token is no longer present
+![screenshots/screenshot-06.png](screenshots/screenshot-06.png)
+
+SCREENSHOT: View of our graph database in Neo4j Browser
+![screenshots/screenshot-07.png](screenshots/screenshot-07.png)
+
+SCREENSHOT: View of the sample JWT token
+![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
+
 ## Initial setup
 
 To run this example, all you need to have installed on your system is [Docker](https://www.docker.com) and `npm` installed on your development system - which is automatically included if you downloaded and installed [Node.js](https://nodejs.org/).
