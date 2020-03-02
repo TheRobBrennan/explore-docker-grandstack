@@ -23,7 +23,20 @@ Before running this example, please fire up the [Neo4j Browser](http://localhost
 If you already have `npm` and [Docker](https://www.docker.com) installed on your development system, simply run:
 
 ```sh
-$ npm run start
+# Start the project
+$ npm run start       # Uses Neo4j v3.5
+$ npm run start:v4.0  # Uses Neo4j v4.0
+
+# Build the Docker infrastructure from scratch
+$ npm run build       # Uses Neo4j v3.5
+$ npm run build:v4.0  # Uses Neo4j v4.0
+
+# Stop the Docker containers from running
+$ npm run stop       # Uses Neo4j v3.5
+$ npm run stop:v4.0  # Uses Neo4j v4.0
+
+# Destroy all Docker containers, images, volumes, and networks
+$ npm run docker:nuke
 ```
 
 This will create the services identified by `docker-compose.yml` - which includes a [Neo4j](https://neo4j.com) database server, a [GraphQL](https://graphql.org) back-end powered by [Express](https://expressjs.com) and [Apollo](https://www.apollographql.com), and a [GraphQL](https://graphql.org) web application built with [create-react-app](https://create-react-app.dev) and [Apollo](https://www.apollographql.com).
@@ -37,33 +50,7 @@ This will create the services identified by `docker-compose.yml` - which include
 ![screenshots/screenshot-06.png](screenshots/screenshot-06.png)
 ![screenshots/screenshot-07.png](screenshots/screenshot-07.png)
 
-#### Additional scripts
-
-This project also includes the following additional scripts for working with Docker:
-
-+ "docker:build"
-+ "docker:stop"
-+ "docker:nuke"
-
-To run these scripts, you just need to run `npm run <script>` from the root level of this project.
-
-##### docker:build
-
-This is the script you would want to run if you've made any changes to Docker infrastructure files, such as modifications to `docker-compose.yml`, `Dockerfile`, etc.
-
-##### docker:stop
-
-This is the script you would want to run if you want to stop all of the Docker services and containers that are running for this project.
-
-If you have stopped services and containers, you can start them again with `npm run docker:start`
-
-##### docker:nuke
-
-This is a convenient tool that can have drastic consequences. If you would like to destroy **ALL** Docker images, containers, volumes, and networks on your system - **for all projects, not just this one** - this is the script for you.
-
-Be careful!
-
-#### Useful URLs
+### Useful URLs
 
 Once your Dockerized example is up and running, here are some useful URLs:
 
@@ -79,4 +66,6 @@ Once your Dockerized example is up and running, here are some useful URLs:
     + To find a valid token, make sure you have registered and logged in with an account, and then view your browser development tools to find the token stored in your local storage.
       + Curious what's inside that magic JWT token? Check out [https://jwt.io](https://jwt.io) and paste it in to find out.
       ![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
-+ [http://localhost:7474/browser/](http://localhost:7474/browser/) - This is the Neo4j Browser that will allow you to interact with your Neo4j server
++ Neo4j Browser - This is the Neo4j Browser that will allow you to interact with your Neo4j database server
+  + `Neo4j v3.5` - [http://localhost:7474/browser/](http://localhost:7474/browser/)
+  + `Neo4j v4.0` - [http://0.0.0.0:7474/browser/](http://0.0.0.0:7474/browser/)
