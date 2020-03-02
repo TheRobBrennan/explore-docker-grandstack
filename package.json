@@ -1,6 +1,6 @@
 {
   "name": "explore-docker-grandstack",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "This project is meant to serve as a starting point for exploring the [GRANDstack](https://grandstack.io/docs/getting-started-neo4j-graphql.html) - GraphQL, React, Apollo, and Neo4j - using [Docker](https://www.docker.com).",
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
   "license": "ISC",
