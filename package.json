@@ -5,11 +5,12 @@
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd examples/grandstack-starter && npm run build",
-    "start": "cd examples/grandstack-starter && npm run start",
-    "start:example-with-local-authentication": "cd examples/grandstack-seed-with-local-authentication && npm run start",
-    "stop": "cd examples/grandstack-starter && npm run stop",
+    "build": "npm run docker:build",
+    "start": "npm run docker:start",
+    "stop":  "npm run docker:stop",
+    "docker:build": "docker-compose up --remove-orphans --build --force-recreate",
+    "docker:start": "docker-compose up",
+    "docker:stop": "docker-compose down",
     "docker:nuke": "docker system prune -a && docker volume prune"
   },
   "repository": {
