@@ -2,33 +2,6 @@
 
 This GRANDStack ([GraphQL](https://graphql.org), [React](https://reactjs.org), [Apollo](https://www.apollographql.com), [Neo4j Database](https://neo4j.com)) example contains built-in local authentication against a Neo4j back-end database - originally inspired by existing work from [@erikrahm](https://github.com/erikrahm) in the repo [https://github.com/erikrahm/grand-stack-seed](https://github.com/erikrahm/grand-stack-seed) - and is meant to serve as a starting point for exploring the [GRANDstack](https://grandstack.io/docs/getting-started-neo4j-graphql.html) using [Docker](https://www.docker.com).
 
-SCREENSHOT: Loading `/` redirects to the `/login` page
-![screenshots/screenshot-00.png](screenshots/screenshot-00.png)
-
-SCREENSHOT: Attempting to login against an empty database
-![screenshots/screenshot-01.png](screenshots/screenshot-01.png)
-
-SCREENSHOT: Creating a new account
-![screenshots/screenshot-02.png](screenshots/screenshot-02.png)
-
-SCREENSHOT: Ready to login!
-![screenshots/screenshot-03.png](screenshots/screenshot-03.png)
-
-SCREENSHOT: View after successfully authenticating
-![screenshots/screenshot-04.png](screenshots/screenshot-04.png)
-
-SCREENSHOT: View after successfully authenticating with the authorization token in local storage
-![screenshots/screenshot-05.png](screenshots/screenshot-05.png)
-
-SCREENSHOT: View after logging out - note that the authorization token is no longer present
-![screenshots/screenshot-06.png](screenshots/screenshot-06.png)
-
-SCREENSHOT: View of our graph database in Neo4j Browser
-![screenshots/screenshot-07.png](screenshots/screenshot-07.png)
-
-SCREENSHOT: View of the sample JWT token
-![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
-
 ## Initial setup
 
 To run this example, all you need to have installed on your system is [Docker](https://www.docker.com) and `npm` installed on your development system - which is automatically included if you downloaded and installed [Node.js](https://nodejs.org/).
@@ -54,6 +27,15 @@ $ npm run start
 ```
 
 This will create the services identified by `docker-compose.yml` - which includes a [Neo4j](https://neo4j.com) database server, a [GraphQL](https://graphql.org) back-end powered by [Express](https://expressjs.com) and [Apollo](https://www.apollographql.com), and a [GraphQL](https://graphql.org) web application built with [create-react-app](https://create-react-app.dev) and [Apollo](https://www.apollographql.com).
+
+![screenshots/screenshot-00.png](screenshots/screenshot-00.png)
+![screenshots/screenshot-01.png](screenshots/screenshot-01.png)
+![screenshots/screenshot-02.png](screenshots/screenshot-02.png)
+![screenshots/screenshot-03.png](screenshots/screenshot-03.png)
+![screenshots/screenshot-04.png](screenshots/screenshot-04.png)
+![screenshots/screenshot-05.png](screenshots/screenshot-05.png)
+![screenshots/screenshot-06.png](screenshots/screenshot-06.png)
+![screenshots/screenshot-07.png](screenshots/screenshot-07.png)
 
 #### Additional scripts
 
@@ -95,4 +77,5 @@ Once your Dockerized example is up and running, here are some useful URLs:
   ```
     + To find a valid token, make sure you have registered and logged in with an account, and then view your browser development tools to find the token stored in your local storage.
       + Curious what's inside that magic JWT token? Check out [https://jwt.io](https://jwt.io) and paste it in to find out.
+      ![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
 + [http://localhost:7474/browser/](http://localhost:7474/browser/) - This is the Neo4j Browser that will allow you to interact with your Neo4j server
