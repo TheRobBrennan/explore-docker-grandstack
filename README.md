@@ -66,4 +66,6 @@ Once your Dockerized example is up and running, here are some useful URLs:
     + To find a valid token, make sure you have registered and logged in with an account, and then view your browser development tools to find the token stored in your local storage.
       + Curious what's inside that magic JWT token? Check out [https://jwt.io](https://jwt.io) and paste it in to find out.
       ![screenshots/screenshot-08.png](screenshots/screenshot-08.png)
-+ [http://localhost:7474/browser/](http://localhost:7474/browser/) - This is the Neo4j Browser that will allow you to interact with your Neo4j server
++ Neo4j Browser - This is the Neo4j Browser that will allow you to interact with your Neo4j database server
+  + `Neo4j v3.5` - [http://localhost:7474/browser/](http://localhost:7474/browser/)
+  + `Neo4j v4.0` - [http://0.0.0.0:7474/browser/](http://0.0.0.0:7474/browser/)
