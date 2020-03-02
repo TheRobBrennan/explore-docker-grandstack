@@ -1,15 +1,16 @@
 {
   "name": "explore-docker-grandstack",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "This project is meant to serve as a starting point for exploring the [GRANDstack](https://grandstack.io/docs/getting-started-neo4j-graphql.html) - GraphQL, React, Apollo, and Neo4j - using [Docker](https://www.docker.com).",
   "author": "Rob Brennan <rob@therobbrennan.com> (therobbrennan.com)",
   "license": "ISC",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd examples/grandstack-starter && npm run build",
-    "start": "cd examples/grandstack-starter && npm run start",
-    "start:example-with-local-authentication": "cd examples/grandstack-seed-with-local-authentication && npm run start",
-    "stop": "cd examples/grandstack-starter && npm run stop",
+    "build": "npm run docker:build",
+    "start": "npm run docker:start",
+    "stop":  "npm run docker:stop",
+    "docker:build": "docker-compose up --remove-orphans --build --force-recreate",
+    "docker:start": "docker-compose up",
+    "docker:stop": "docker-compose down",
     "docker:nuke": "docker system prune -a && docker volume prune"
   },
   "repository": {

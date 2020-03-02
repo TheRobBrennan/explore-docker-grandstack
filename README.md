@@ -1,56 +1,63 @@
 # Welcome
 
-This project is meant to serve as a starting point for exploring the [GRANDstack](https://grandstack.io/docs/getting-started-neo4j-graphql.html) - GraphQL, React, Apollo, and Neo4j - using [Docker](https://www.docker.com).
+This GRANDStack ([GraphQL](https://graphql.org), [React](https://reactjs.org), [Apollo](https://www.apollographql.com), [Neo4j Database](https://neo4j.com)) example contains built-in local authentication against a Neo4j back-end database - originally inspired by existing work from [@erikrahm](https://github.com/erikrahm) in the repo [https://github.com/erikrahm/grand-stack-seed](https://github.com/erikrahm/grand-stack-seed) - and is meant to serve as a starting point for exploring the [GRANDstack](https://grandstack.io/docs/getting-started-neo4j-graphql.html) using [Docker](https://www.docker.com).
 
 ## Initial setup
 
-### Docker
+To run this example, all you need to have installed on your system is [Docker](https://www.docker.com) and `npm` installed on your development system - which is automatically included if you downloaded and installed [Node.js](https://nodejs.org/).
 
-The easiest way to use this repo is to have [Docker Desktop](https://www.docker.com/products/docker-desktop) installed and configured on your development machine.
+If you do not have [Docker](https://www.docker.com) installed on your development system, The easiest way to use this repo is to have [Docker Desktop](https://www.docker.com/products/docker-desktop) installed and configured on your development machine.
 
-## Additional examples
+If you already have `npm` and [Docker](https://www.docker.com) installed on your development system, please continue to "Running the example"
 
-### Example: Using Neo4j for local user authentication
+### Running the example
 
-Based on my project at [https://github.com/TheRobBrennan/grandstack-seed](https://github.com/TheRobBrennan/grandstack-seed), you can run this example project on your development machine to see how simple user account creation and authentication can work with a Neo4j database.
-
-Please verify you have set up your development environment correctly by reading `examples/grandstack-seed-with-local-authentication/README.md` - and then you can run:
+If you already have `npm` and [Docker](https://www.docker.com) installed on your development system, simply run:
 
 ```sh
-$ npm run start:example-with-local-authentication
-> explore-docker-grandstack@0.0.0 start:example-with-local-authentication /Users/rob/repos/explore-docker-grandstack
-> cd examples/grandstack-seed-with-local-authentication && npm run start
-
-
-> grandstack-seed@0.0.0 start /Users/rob/repos/explore-docker-grandstack/examples/grandstack-seed-with-local-authentication
-> npx concurrently "cd server && npm start" "cd client && npm start"
-
-npx: installed 54 in 3.664s
-[0] 
-[0] > grand-server@0.0.0 start /Users/rob/repos/explore-docker-grandstack/examples/grandstack-seed-with-local-authentication/server
-[0] > nodemon --exec babel-node src/index.js
-[0] 
-[1] 
-[1] > grand-stack-seed-client@0.0.0 start /Users/rob/repos/explore-docker-grandstack/examples/grandstack-seed-with-local-authentication/client
-[1] > react-scripts start
-[1] 
-[0] [nodemon] 1.18.10
-[0] [nodemon] to restart at any time, enter `rs`
-[0] [nodemon] watching: *.*
-[0] [nodemon] starting `babel-node src/index.js`
-[1] Starting the development server...
-[1] 
-[0] 🚀 Server live at http://localhost:8000 🚀
-[1] Compiled successfully!
-[1] 
-[1] The app is running at:
-[1] 
-[1]   http://localhost:3000/
-[1] 
-[1] Note that the development build is not optimized.
-[1] To create a production build, use yarn run build.
-[1] 
+$ npm run start
 ```
 
-Visit [http://localhost:3000/register](http://localhost:3000/register) to create a new account.
-Visit [http://localhost:3000/login](http://localhost:3000/login) to login with an account.
+This will create the services identified by `docker-compose.yml` - which includes a [Neo4j](https://neo4j.com) database server, a [GraphQL](https://graphql.org) back-end powered by [Express](https://expressjs.com) and [Apollo](https://www.apollographql.com), and a [GraphQL](https://graphql.org) web application built with [create-react-app](https://create-react-app.dev) and [Apollo](https://www.apollographql.com).
+
+#### Additional scripts
+
+This project also includes the following additional scripts for working with Docker:
+
++ "docker:build"
++ "docker:stop"
++ "docker:nuke"
+
+To run these scripts, you just need to run `npm run <script>` from the root level of this project.
+
+##### docker:build
+
+This is the script you would want to run if you've made any changes to Docker infrastructure files, such as modifications to `docker-compose.yml`, `Dockerfile`, etc.
+
+##### docker:stop
+
+This is the script you would want to run if you want to stop all of the Docker services and containers that are running for this project.
+
+If you have stopped services and containers, you can start them again with `npm run docker:start`
+
+##### docker:nuke
+
+This is a convenient tool that can have drastic consequences. If you would like to destroy **ALL** Docker images, containers, volumes, and networks on your system - **for all projects, not just this one** - this is the script for you.
+
+Be careful!
+
+#### Useful URLs
+
+Once your Dockerized example is up and running, here are some useful URLs:
+
++ [http://localhost:3000/](http://localhost:3000/) - This is the React front-end web application
++ [http://localhost:8000/graphql](http://localhost:8000/graphql) - This is the GraphiQL IDE you can use to interact with your GraphQL back-end server
+  + Since we are using protected routes for our GraphQL server, you will need to pass a valid authorization token in the `HTTP Headers` section such as:
+  ```json
+  {
+    "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiZWQ5ZmVlZTgtZjdlZi00NTIxLWIwOWQtNGU5OTNlYjk5MDEwIiwidXNlcm5hbWUiOiJ0aGVyb2JicmVubmFuIn0sImlhdCI6MTU4MzExMTA2OCwiZXhwIjoxNTgzNzE1ODY4fQ.mMq9QCpXLtsGNb0HWMszz9gAD-c8rjidVVZku3geEQQ"
+  }
+  ```
+    + To find a valid token, make sure you have registered and logged in with an account, and then view your browser development tools to find the token stored in your local storage.
+      + Curious what's inside that magic JWT token? Check out [https://jwt.io](https://jwt.io) and paste it in to find out.
++ [http://localhost:7474/browser/](http://localhost:7474/browser/) - This is the Neo4j Browser that will allow you to interact with your Neo4j server
