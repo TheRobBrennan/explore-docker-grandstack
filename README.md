@@ -39,6 +39,14 @@ If you already have `npm` and [Docker](https://www.docker.com) installed on your
 
 ### Running the example
 
+Before running this example, please fire up the [Neo4j Browser](http://localhost:7474/browser/). Once you have authenticated (using `neo4j` as the user and `letmein` as the password), please copy and paste the Cypher script at `server/src/scripts/seedDb.cypher` and run it:
+
+![screenshots/screenshot-09.png](screenshots/screenshot-09.png)
+![screenshots/screenshot-10.png](screenshots/screenshot-10.png)
+![screenshots/screenshot-11.png](screenshots/screenshot-11.png)
+![screenshots/screenshot-12.png](screenshots/screenshot-12.png)
+![screenshots/screenshot-13.png](screenshots/screenshot-13.png)
+
 If you already have `npm` and [Docker](https://www.docker.com) installed on your development system, simply run:
 
 ```sh
