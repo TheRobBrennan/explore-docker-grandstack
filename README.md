@@ -39,19 +39,23 @@ This will create the services identified by `docker-compose.yml` - which include
 
 #### Additional scripts
 
+Currently, this project will default to using `Neo4j v3.5` as the back-end database. Support has just been added for `Neo4j v4.0` - with those additional scripts containing a `:v4.0` in the script name.
+
+For example, you can start the `Neo4j v3.5` version of this project by running `$ npm run start`. To run the `Neo4j v4.0` version, you would run `$ npm run start:v4.0`
+
 This project also includes the following additional scripts for working with Docker:
 
-+ "docker:build"
-+ "docker:stop"
++ "docker:build" and "docker:build:v4.0"
++ "docker:stop" and "docker:stop:v4.0"
 + "docker:nuke"
 
 To run these scripts, you just need to run `npm run <script>` from the root level of this project.
 
-##### docker:build
+##### docker:build and docker:build:v4.0
 
 This is the script you would want to run if you've made any changes to Docker infrastructure files, such as modifications to `docker-compose.yml`, `Dockerfile`, etc.
 
-##### docker:stop
+##### docker:stop and docker:stop:v4.0
 
 This is the script you would want to run if you want to stop all of the Docker services and containers that are running for this project.
 
