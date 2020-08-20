@@ -16,7 +16,7 @@
     "apollo-client": "^2.6.8",
     "apollo-link": "^1.2.13",
     "apollo-link-http": "^1.5.16",
-    "bcrypt": "^4.0.0",
+    "bcrypt": "^5.0.0",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
     "react": "^16.12.0",
